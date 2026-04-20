@@ -37,7 +37,7 @@ def create_application() -> FastAPI:
         docs_url=f"{settings.API_V1_STR}/docs",
         # Where the ReDoc documentation lives
         redoc_url=f"{settings.API_V1_STR}/redoc",
-        debug=settings.DEBUG,
+        debug=settings.,
     )
 
     # Attach the rate limiter to the app
