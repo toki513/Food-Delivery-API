@@ -39,5 +39,17 @@ def create_application()->FastAPI:
     
     return application
 
+
+
+
 app=create_application()
 
+
+
+
+@app.get("/health", tags=["health"])
+async def health_check():
+    return{
+        "status ":"Healthy",
+        "app":settings.APP_NAME
+    }

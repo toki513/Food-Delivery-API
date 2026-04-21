@@ -17,6 +17,8 @@ class Settings(BaseSettings):
         
     REDIS_URL:str="redis://localhost:6379"
     
+    UPLOAD_DIR:str="uploads"
+    
     
     model_config=SettingsConfigDict(
         env_file=".env",
