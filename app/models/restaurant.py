@@ -33,5 +33,9 @@ class Restaurant(Base):
     menu_items:Mapped[list["MenuItem"]]=relationship(
         "MenuItem",back_populates="restaurant",cascade="all,delete-orphan",lazy="selectin"
     )
+    orders:Mapped[list["Order"]]=relationship(
+        "Order",back_populates="restaurant",lazy="selectin"
+    )
     
-    
+    def __repr__(self) -> str:
+        return f"<Restaurant {self.name}>"
