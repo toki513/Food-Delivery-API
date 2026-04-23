@@ -16,8 +16,9 @@ class UserRole(str,enum.Enum):
 
 class User(Base):
     __tablename__="users"
-    id:Mapped[uuid.UUID]=mapped_column(UUID(as_uuid=True),primary_key=True),
-    email:Mapped[str]=mapped_column(String,unique=True,index=True),
+    
+    id:Mapped[uuid.UUID]=mapped_column(UUID(as_uuid=True),primary_key=True)
+    email:Mapped[str]=mapped_column(String,unique=True,index=True)
     full_name: Mapped[str] = mapped_column(String(255), nullable=False)
     hashed_password:Mapped[str]=mapped_column(String(255))
     
