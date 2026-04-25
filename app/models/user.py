@@ -46,4 +46,4 @@ class User(Base):
     )
     
     def __repr__(self) ->str:
-          return f"<User {self.email} ({self.role})>"
+          return f"<User {self.email} ({self.})>"
